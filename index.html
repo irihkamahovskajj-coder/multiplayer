@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixel Arena — Multiplayer</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="menu" class="overlay">
+    <div class="panel">
+      <h1>Pixel Arena</h1>
+      <p>Небольшая онлайн-арена. Зайди с другого устройства — игроки увидят друг друга.</p>
+      <input id="nameInput" maxlength="16" placeholder="Твоё имя" autocomplete="off" />
+      <button id="playButton">Играть</button>
+      <p id="connectionHint" class="hint">Сервер: подключение…</p>
+    </div>
+  </div>
+
+  <div id="hud" class="hud hidden">
+    <div><strong>Pixel Arena</strong></div>
+    <div id="playerCount">Игроков: 0</div>
+    <div class="controls">WASD / стрелки — движение</div>
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

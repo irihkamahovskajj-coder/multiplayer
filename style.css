@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; font-family: Inter, system-ui, sans-serif; background: #111827; color: white; }
+body { display: grid; place-items: center; }
+canvas { display: block; width: 100vw; height: 100vh; background: #18212f; image-rendering: pixelated; }
+.overlay {
+  position: fixed; inset: 0; z-index: 10; display: grid; place-items: center;
+  background: radial-gradient(circle at center, rgba(31,41,55,.78), rgba(3,7,18,.96));
+}
+.panel {
+  width: min(92vw, 440px); padding: 32px; border-radius: 22px;
+  background: rgba(17,24,39,.94); border: 1px solid rgba(255,255,255,.1);
+  box-shadow: 0 25px 80px rgba(0,0,0,.45); text-align: center;
+}
+.panel h1 { margin: 0 0 8px; font-size: 38px; }
+.panel p { color: #cbd5e1; line-height: 1.5; }
+input, button {
+  width: 100%; padding: 14px 16px; border-radius: 12px; font: inherit;
+  margin-top: 12px; border: 1px solid #334155;
+}
+input { background: #0f172a; color: white; outline: none; }
+button { cursor: pointer; background: #22c55e; color: #052e16; border: 0; font-weight: 800; }
+button:hover { filter: brightness(1.08); }
+.hint { font-size: 13px; margin-bottom: 0; }
+.hud {
+  position: fixed; z-index: 5; left: 16px; top: 16px; display: flex; gap: 12px;
+  align-items: center; flex-wrap: wrap; padding: 10px 14px; border-radius: 12px;
+  background: rgba(2,6,23,.72); backdrop-filter: blur(8px); font-size: 14px;
+}
+.controls { color: #94a3b8; }
+.hidden { display: none !important; }
+@media (max-width: 600px) {
+  .panel { padding: 24px; }
+  .panel h1 { font-size: 30px; }
+  .controls { display: none; }
+}
